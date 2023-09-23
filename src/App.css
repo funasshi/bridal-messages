@@ -36,3 +36,68 @@
     transform: rotate(360deg);
   }
 }
+
+/* 文字をはねてフェードアウト */
+@keyframes bounceFadeIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(-10px);
+    opacity: 0.6;
+  }
+  60% {
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+p span {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceFadeIn 0.6s 1 forwards; /* アニメーションの持続時間を0.6秒、回数を1回に設定、アニメーション完了後のスタイルを保持 */
+}
+p span:nth-child(1) {
+  animation-delay: 0.5s;
+} /* 1文字目: 0秒遅延 */
+p span:nth-child(2) {
+  animation-delay: 0.55s;
+} /* 2文字目: 0.2秒遅延 */
+p span:nth-child(3) {
+  animation-delay: 0.6s;
+} /* 3文字目: 0.4秒遅延 */
+p span:nth-child(4) {
+  animation-delay: 0.65s;
+} /* 4文字目: 0.6秒遅延 */
+p span:nth-child(5) {
+  animation-delay: 0.7s;
+} /* 5文字目: 0.8秒遅延 */
+p span:nth-child(6) {
+  animation-delay: 0.75s;
+} /* 6文字目: 1.0秒遅延 */
+p span:nth-child(7) {
+  animation-delay: 0.8s;
+} /* 6文字目: 1.0秒遅延 */
+
+/* 写真の動かし */
+@keyframes moveFade {
+  0% {
+    transform: translateX(0);
+    opacity: 0; /* 最初は完全に透明 */
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1; /* 中間点で完全に不透明 */
+  }
+  100% {
+    transform: translateX(50px); /* 最後は元の位置に戻る */
+    opacity: 0; /* 最後は再び透明になる */
+  }
+}
