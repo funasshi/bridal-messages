@@ -1,7 +1,6 @@
 import { Container, Image } from 'react-bootstrap';
 
 export const WelcomePhotoContainer = () => {
-  console.log(`${process.env.REACT_APP_ROOT_PATH}images/yuka.jpg`);
   return (
     <Container
       style={{
