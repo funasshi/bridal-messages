@@ -5,7 +5,7 @@ import { Container } from 'react-bootstrap';
 
 const App = () => {
   const queryParams = new URLSearchParams(window.location.search);
-  console.log(queryParams.get('name'));
+  console.log('query', queryParams.get('name'));
   const guestName = queryParams.get('name') || 'YamadaYuka';
   const [showWelcomeHideMessage, setShowWelcomeHideMessage] =
     useState<boolean>(true);
