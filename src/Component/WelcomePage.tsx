@@ -6,8 +6,10 @@ import {
 
 export const WelcomePage = ({
   onAnimationEnd,
+  guestName,
 }: {
   onAnimationEnd: () => void;
+  guestName: string;
 }) => {
   return (
     <div
@@ -22,7 +24,10 @@ export const WelcomePage = ({
       }}
     >
       <WelcomeTopObject />
-      <WelcomePhotoContainer onAnimationEnd={onAnimationEnd} />
+      <WelcomePhotoContainer
+        onAnimationEnd={onAnimationEnd}
+        guestName={guestName}
+      />
       <WelcomeBottomObject />
     </div>
   );
