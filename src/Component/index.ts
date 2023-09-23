@@ -6,3 +6,4 @@ export * from './MessagePage';
 export * from './MessagePhoto';
 export * from './Message';
 export * from './DateCircle';
+export * from './BounceFadeinSentence';

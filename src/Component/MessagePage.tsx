@@ -1,4 +1,9 @@
-import { DateCircle, MessagePhoto, Message } from '../Component';
+import {
+  DateCircle,
+  MessagePhoto,
+  Message,
+  BounceFadeinSentence,
+} from '../Component';
 
 export const MessagePage = () => {
   return (
@@ -25,9 +30,10 @@ export const MessagePage = () => {
             fontSize: '40px',
             textAlign: 'center',
             fontFamily: 'Parisienne',
+            animation: `bounceFadeIn 0.4s forwards 0s`,
           }}
         >
-          Thank you
+          <BounceFadeinSentence sentence={'Thank you'} />
         </p>
         <Message />
         <MessagePhoto />
