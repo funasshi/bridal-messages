@@ -2,11 +2,9 @@ import { useState } from 'react';
 import './App.css';
 import { MessagePage, WelcomePage } from './Component';
 import { Container } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
 
 const App = () => {
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
+  const queryParams = new URLSearchParams(window.location.search);
   const guestName = queryParams.get('name') || 'guest';
 
   const [showWelcomeHideMessage, setShowWelcomeHideMessage] =
