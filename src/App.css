@@ -110,3 +110,17 @@ p span:nth-child(7) {
     opacity: 0; /* 最後は再び透明になる */
   }
 }
+
+html {
+  visibility: hidden;
+}
+html.wf-active {
+  visibility: visible;
+}
+p {
+  visibility: hidden;
+}
+
+.wf-active p {
+  visibility: visible;
+}
