@@ -10,5 +10,13 @@ export const messageMap = new Map<
       author: '京花',
     },
   ],
+  [
+    'IshikawaYatsuho',
+    {
+      message:
+        'ご結婚おめでとうございます\n大学一年の時から、なんやかんやで一番遊んでいる友達です\nカナダに行っても是非カードバトラー魂を忘れないでください',
+      author: '厚芳',
+    },
+  ],
   // 他の名前とメッセージを追加
 ]);

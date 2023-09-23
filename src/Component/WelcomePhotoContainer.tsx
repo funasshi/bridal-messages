@@ -32,7 +32,7 @@ export const WelcomePhotoContainer = ({
           }}
         >
           <Image
-            src={`${process.env.REACT_APP_ROOT_PATH}images/${guestName}.jpg`}
+            src={`${process.env.REACT_APP_ROOT_PATH}images/${guestName}.png`}
             className='w-100 h-100'
             // TODO: coverで比率は保つが、一瞬縮むので、元画像を正方形にする
             style={{ objectFit: 'cover' }}
