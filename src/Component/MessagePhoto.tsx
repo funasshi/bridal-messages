@@ -8,7 +8,6 @@ export const MessagePhoto = () => {
         textAlign: 'right',
       }}
     >
-      {' '}
       <Image
         src={`${process.env.REACT_APP_ROOT_PATH}images/weddingCake.jpg`}
         style={{

@@ -4,7 +4,11 @@ import {
   WelcomeBottomObject,
 } from '../Component';
 
-export const WelcomePage = () => {
+export const WelcomePage = ({
+  onAnimationEnd,
+}: {
+  onAnimationEnd: () => void;
+}) => {
   return (
     <div
       className='w-100'
@@ -18,7 +22,7 @@ export const WelcomePage = () => {
       }}
     >
       <WelcomeTopObject />
-      <WelcomePhotoContainer />
+      <WelcomePhotoContainer onAnimationEnd={onAnimationEnd} />
       <WelcomeBottomObject />
     </div>
   );
