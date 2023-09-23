@@ -7,7 +7,7 @@ export const WelcomePhotoFrame = () => {
     <div
       className='w-100'
       style={{
-        backgroundImage: `url(${process.env.REACT_APP_ROOT_PATH}/images/welcomeBackgroundImage.png)`,
+        backgroundImage: `url(${process.env.REACT_APP_ROOT_PATH}images/welcomeBackgroundImage.png)`,
         backgroundSize: 'cover',
         height: '100vh',
         backgroundColor: 'rgba(255, 255, 255, 0.3)',

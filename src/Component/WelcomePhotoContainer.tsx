@@ -1,7 +1,7 @@
 import { Container, Image } from 'react-bootstrap';
 
 export const WelcomePhotoContainer = () => {
-  console.log(`${process.env.REACT_APP_ROOT_PATH}/images/yuka.jpg`);
+  console.log(`${process.env.REACT_APP_ROOT_PATH}images/yuka.jpg`);
   return (
     <Container
       style={{
@@ -23,7 +23,7 @@ export const WelcomePhotoContainer = () => {
           }}
         >
           <Image
-            src={`${process.env.REACT_APP_ROOT_PATH}/images/yuka.jpg`}
+            src={`${process.env.REACT_APP_ROOT_PATH}images/yuka.jpg`}
             className='w-100 h-100'
             // TODO: coverで比率は保つが、一瞬縮むので、元画像を正方形にする
             style={{ objectFit: 'cover' }}
