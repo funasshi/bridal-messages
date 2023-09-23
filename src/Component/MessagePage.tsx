@@ -5,7 +5,7 @@ import {
   BounceFadeinSentence,
 } from '../Component';
 
-export const MessagePage = () => {
+export const MessagePage = ({ guestName }: { guestName: string }) => {
   return (
     <div
       className='w-100'
@@ -35,7 +35,7 @@ export const MessagePage = () => {
         >
           <BounceFadeinSentence sentence={'Thank you'} />
         </p>
-        <Message />
+        <Message guestName={guestName} />
         <MessagePhoto />
       </div>
     </div>

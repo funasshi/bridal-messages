@@ -1,9 +1,12 @@
+import { messageMap } from '../Util/messageMap';
 import { BounceFadeinSentence } from './BounceFadeinSentence';
 
-export const Message = () => {
-  const message =
-    '今日はきてくれてありがとう！！\n卒業後も仲良くしてくれて嬉しい！\nこれからも旅行たくさん行こうね！\n今日はたのしんでいってね♪';
-  const author = '京花';
+export const Message = ({ guestName }: { guestName: string }) => {
+  const messageObject = messageMap.get(guestName);
+  // guard
+  if (!messageObject) return <></>;
+
+  const { message, author } = messageObject;
   const messageSentences = message.split('\n');
 
   // どのくらい遅くするかの計算のために使用
