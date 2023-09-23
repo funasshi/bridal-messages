@@ -2,7 +2,7 @@ import { messageMap } from '../Util/messageMap';
 import { BounceFadeinSentence } from './BounceFadeinSentence';
 
 export const Message = ({ guestName }: { guestName: string }) => {
-  const messageObject = messageMap.get(guestName);
+  const messageObject = messageMap.get('YamadaYuka');
   // guard
   if (!messageObject) return <></>;
 
