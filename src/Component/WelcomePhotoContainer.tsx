@@ -1,6 +1,10 @@
 import { Container, Image } from 'react-bootstrap';
 
-export const WelcomePhotoContainer = () => {
+export const WelcomePhotoContainer = ({
+  onAnimationEnd,
+}: {
+  onAnimationEnd: () => void;
+}) => {
   return (
     <Container
       style={{
@@ -10,7 +14,11 @@ export const WelcomePhotoContainer = () => {
       }}
       className='w-100 h-100'
     >
-      <div className='w-100' style={{ maxWidth: '400px' }}>
+      <div
+        className='w-100'
+        style={{ maxWidth: '400px' }}
+        onAnimationEnd={onAnimationEnd}
+      >
         <div
           style={{
             width: '320px',
