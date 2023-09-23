@@ -1,8 +1,10 @@
-import { WelcomePhotoContainer } from './WelcomePhotoContainer';
-import { WelcomeTopObject } from './WelcomeTopObject';
-import { WelcomeBottomObject } from './WelcomeBottomObject';
+import {
+  WelcomePhotoContainer,
+  WelcomeTopObject,
+  WelcomeBottomObject,
+} from '../Component';
 
-export const WelcomePhotoFrame = () => {
+export const WelcomePage = () => {
   return (
     <div
       className='w-100'
