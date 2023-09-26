@@ -13,6 +13,7 @@ export const WelcomePhotoContainer = ({
         zIndex: 0,
         display: 'grid',
         placeItems: 'center',
+        overflow: 'hidden',
       }}
       className='w-100 h-100'
     >
@@ -24,7 +25,7 @@ export const WelcomePhotoContainer = ({
         <div
           style={{
             width: '320px',
-            height: '320px',
+            height: '280px',
             display: 'inline-block',
             clipPath:
               'polygon(10% 0%, 90% 0%, 100% 20%, 95% 95%, 0% 100%, 0% 50%)',
