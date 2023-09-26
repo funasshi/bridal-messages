@@ -1,3 +1,5 @@
+import { BounceFadeinSentence } from './BounceFadeinSentence';
+
 export const WelcomeTopObject = () => {
   return (
     <div
@@ -26,15 +28,10 @@ export const WelcomeTopObject = () => {
           transform: 'rotate(-10deg)',
           display: 'inline-block',
           width: '50%',
+          animation: 'fadeOut 1.5s 1 3.6s forwards',
         }}
       >
-        <span>B</span>
-        <span>i</span>
-        <span>g</span>
-        <span>D</span>
-        <span>a</span>
-        <span>y</span>
-        <span>!</span>
+        <BounceFadeinSentence sentence='BigDay!' />
       </p>
     </div>
   );
