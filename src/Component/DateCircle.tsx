@@ -2,7 +2,7 @@ export const DateCircle = () => {
   return (
     <div
       style={{
-        border: 'solid 1px yellow',
+        border: 'solid 1px #807169',
         display: 'inline-block',
         width: '80px',
         height: '80px',
