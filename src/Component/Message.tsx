@@ -24,7 +24,7 @@ export const Message = ({ guestName }: { guestName: string }) => {
         maxWidth: '400px',
         margin: '0 auto',
         fontFamily: 'Kiwi Maru',
-        fontSize: '18px',
+        fontSize: '16px',
         letterSpacing: '0.12em',
         lineHeight: 2,
       }}
