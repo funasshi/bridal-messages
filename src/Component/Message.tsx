@@ -49,10 +49,6 @@ export const Message = ({ guestName }: { guestName: string }) => {
         return (
           <React.Fragment key={sentenceIndex}>
             {wrappedSentences.map((wrappedSentence, index) => {
-              console.log(
-                sentenceLengthCul[sentenceIndex],
-                wrappedSentenceLengthCul[index],
-              );
               return (
                 <p
                   key={index}
