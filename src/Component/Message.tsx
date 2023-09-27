@@ -27,6 +27,8 @@ export const Message = ({ guestName }: { guestName: string }) => {
         fontSize: '16px',
         letterSpacing: '0.12em',
         lineHeight: 2,
+        backgroundColor: 'rgb(255,255,255,0.4)',
+        padding: '8px',
       }}
     >
       {messageSentences.map((sentence, sentenceIndex) => (
