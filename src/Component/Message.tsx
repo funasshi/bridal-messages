@@ -1,3 +1,4 @@
+import React from 'react';
 import { messageMap } from '../Util/messageMap';
 import { BounceFadeinSentence } from './BounceFadeinSentence';
 
@@ -31,24 +32,52 @@ export const Message = ({ guestName }: { guestName: string }) => {
         padding: '8px',
       }}
     >
-      {messageSentences.map((sentence, sentenceIndex) => (
-        <p
-          key={sentenceIndex}
-          style={{
-            paddingBottom: '2px',
-            paddingTop: '5px',
-            textAlign: 'center',
-            margin: 0,
-            borderBottom: 'solid 1px #8f8484',
-            borderBottomStyle: 'dotted',
-          }}
-        >
-          <BounceFadeinSentence
-            sentence={sentence}
-            baseTime={sentenceLengthCul[sentenceIndex]}
-          />
-        </p>
-      ))}
+      {messageSentences.map((sentence, sentenceIndex) => {
+        // 折り返しを行う
+        const wrappedSentences = sentence.split(/(.{16})/).filter(Boolean); // 16文字で折り返し
+        const wrappedSentenceLengths = wrappedSentences.map(
+          (sentence, sentenceIndex) => sentence.length,
+        );
+
+        const wrappedSentenceLengthCul = [0];
+        wrappedSentenceLengths.forEach((sentenceLength, _) => {
+          wrappedSentenceLengthCul.push(
+            wrappedSentenceLengthCul.at(-1)! + sentenceLength,
+          );
+        });
+
+        return (
+          <React.Fragment key={sentenceIndex}>
+            {wrappedSentences.map((wrappedSentence, index) => {
+              console.log(
+                sentenceLengthCul[sentenceIndex],
+                wrappedSentenceLengthCul[index],
+              );
+              return (
+                <p
+                  key={index}
+                  style={{
+                    paddingBottom: '2px',
+                    paddingTop: '5px',
+                    textAlign: 'center',
+                    margin: 0,
+                    borderBottom: 'solid 1px #8f8484',
+                    borderBottomStyle: 'dotted',
+                  }}
+                >
+                  <BounceFadeinSentence
+                    sentence={wrappedSentence}
+                    baseTime={
+                      sentenceLengthCul[sentenceIndex] +
+                      wrappedSentenceLengthCul[index]
+                    }
+                  />
+                </p>
+              );
+            })}
+          </React.Fragment>
+        );
+      })}
       <p style={{ textAlign: 'right', marginTop: '5px' }}>
         <BounceFadeinSentence
           sentence={author + 'より'}
