@@ -37,6 +37,7 @@ export const Message = ({ guestName }: { guestName: string }) => {
 
         return (
           <div
+            key={messageIndex}
             style={{
               maxWidth: '400px',
               margin: '0 auto',
