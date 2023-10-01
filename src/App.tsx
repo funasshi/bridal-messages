@@ -2,10 +2,15 @@ import { useState } from 'react';
 import './App.css';
 import { MessagePage, WelcomePage } from './Component';
 import { Container } from 'react-bootstrap';
+import { decrypt } from './Util/cryption';
 
 const App = () => {
   const queryParams = new URLSearchParams(window.location.search);
-  const guestName = queryParams.get('name') || 'default';
+  const encryptedGuestName = queryParams.get('name');
+  const key = process.env.REACT_APP_CRYPT_KEY!;
+  const guestName = encryptedGuestName
+    ? decrypt(encryptedGuestName, key)
+    : 'default';
   const [showWelcomeHideMessage, setShowWelcomeHideMessage] =
     useState<boolean>(true);
   const handleWelcomeAnimationEnd = () => {
