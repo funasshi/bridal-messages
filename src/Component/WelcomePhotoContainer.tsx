@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import { Container, Image } from 'react-bootstrap';
+import { preloadImages } from '../Util/preload';
 
 export const WelcomePhotoContainer = ({
   onAnimationEnd,
@@ -7,6 +9,19 @@ export const WelcomePhotoContainer = ({
   onAnimationEnd: () => void;
   guestName: string;
 }) => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const imageUrl = `${process.env.REACT_APP_ROOT_PATH}images/${guestName}.jpg`;
+    preloadImages([imageUrl])
+      .then(() => {
+        setImageLoaded(true);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <Container
       style={{
@@ -33,7 +48,11 @@ export const WelcomePhotoContainer = ({
           }}
         >
           <Image
-            src={`${process.env.REACT_APP_ROOT_PATH}images/${guestName}.jpg`}
+            src={
+              imageLoaded
+                ? `${process.env.REACT_APP_ROOT_PATH}images/${guestName}.jpg`
+                : ''
+            }
             className='w-100 h-100'
             // TODO: coverで比率は保つが、一瞬縮むので、元画像を正方形にする
             style={{ objectFit: 'cover' }}
