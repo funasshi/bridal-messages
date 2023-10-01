@@ -8,7 +8,8 @@ function countNewlines(inputString: string): number {
 }
 
 export const Message = ({ guestName }: { guestName: string }) => {
-  const messageObjectList = messageMap.get(guestName);
+  const messageObjectList =
+    messageMap.get(guestName) || messageMap.get('default');
   // guard
   const messageLengths = messageObjectList!.map(
     (messageObject, index) =>
@@ -40,7 +41,7 @@ export const Message = ({ guestName }: { guestName: string }) => {
             key={messageIndex}
             style={{
               maxWidth: '400px',
-              margin: '0 auto',
+              margin: '0 auto 20px auto',
               fontFamily: 'Kiwi Maru',
               fontSize: '16px',
               letterSpacing: '0.12em',

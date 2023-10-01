@@ -37,6 +37,11 @@ export const WelcomePhotoContainer = ({
             className='w-100 h-100'
             // TODO: coverで比率は保つが、一瞬縮むので、元画像を正方形にする
             style={{ objectFit: 'cover' }}
+            onError={e => {
+              const imgElement = e.target as HTMLImageElement;
+              imgElement.onerror = null;
+              imgElement.src = `${process.env.REACT_APP_ROOT_PATH}images/default.png`;
+            }}
           />
         </div>
       </div>

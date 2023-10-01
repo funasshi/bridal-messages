@@ -12,7 +12,7 @@ export const MessagePage = ({ guestName }: { guestName: string }) => {
       style={{
         backgroundImage: `url(${process.env.REACT_APP_ROOT_PATH}images/messageBackgroundImage.png)`,
         backgroundSize: 'cover',
-        height: '100vh',
+        minHeight: '100vh',
         display: 'grid',
         placeItems: 'center',
       }}
@@ -26,7 +26,6 @@ export const MessagePage = ({ guestName }: { guestName: string }) => {
       >
         <div
           style={{
-            height: '667px',
             padding: '0 20px',
             width: '100%',
             color: '#807169',
