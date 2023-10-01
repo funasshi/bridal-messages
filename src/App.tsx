@@ -8,15 +8,6 @@ const App = () => {
   const queryParams = new URLSearchParams(window.location.search);
   const encryptedGuestName = queryParams.get('name');
   const key = process.env.REACT_APP_CRYPT_KEY!;
-
-  // 暗号実験
-  console.log(encryptedGuestName);
-  console.log('暗号化', encrypt(encryptedGuestName!, key));
-  const text = 'U2FsdGVkX182eGY0qILTHxpSrsJ5sQQUvICY+P2kiVE=';
-  // const encrypted = decrypt(encryptedGuestName!, key);
-  // console.log('enc', encrypted);
-  console.log('dec', decrypt(text, key));
-
   const guestName = encryptedGuestName
     ? decrypt(encryptedGuestName, key)
     : 'default';
