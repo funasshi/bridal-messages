@@ -20,7 +20,7 @@ export const WelcomeTopObject = () => {
       ></div>
       <p
         style={{
-          fontFamily: 'Allura',
+          fontFamily: 'Parisienne',
           fontSize: '50px',
           position: 'relative',
           bottom: '150px',
@@ -31,7 +31,7 @@ export const WelcomeTopObject = () => {
           animation: 'fadeOut 1.5s 1 3.6s forwards',
         }}
       >
-        <BounceFadeinSentence sentence='BigDay!' />
+        <BounceFadeinSentence sentence='For you!' />
       </p>
     </div>
   );
