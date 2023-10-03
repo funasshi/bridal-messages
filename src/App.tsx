@@ -8,6 +8,7 @@ const App = () => {
   const queryParams = new URLSearchParams(window.location.search);
   const encryptedGuestName = queryParams.get('name');
   const key = process.env.REACT_APP_CRYPT_KEY!;
+  // console.log(encrypt(encryptedGuestName!, key));
   const guestName = encryptedGuestName
     ? decrypt(encryptedGuestName, key)
     : 'default';
