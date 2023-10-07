@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bridal-messages/static/css/main.7e4fed88.css",
-    "main.js": "/bridal-messages/static/js/main.edad7386.js",
+    "main.js": "/bridal-messages/static/js/main.a503370b.js",
     "static/js/787.28cb0dcd.chunk.js": "/bridal-messages/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/bridal-messages/index.html",
     "main.7e4fed88.css.map": "/bridal-messages/static/css/main.7e4fed88.css.map",
-    "main.edad7386.js.map": "/bridal-messages/static/js/main.edad7386.js.map",
+    "main.a503370b.js.map": "/bridal-messages/static/js/main.a503370b.js.map",
     "787.28cb0dcd.chunk.js.map": "/bridal-messages/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7e4fed88.css",
-    "static/js/main.edad7386.js"
+    "static/js/main.a503370b.js"
   ]
 }
